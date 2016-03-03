@@ -1,0 +1,41 @@
+.message {
+  padding: 5px 10px;
+}
+.message-content {
+  position: relative;
+  float: left;
+  background: #f8f8f8;
+  padding: 4px 6px 4px 4px;
+  border-radius: 3px;
+  border: 1px solid #d2d2d2;
+}
+.message-content::after {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #d2d2d2 transparent transparent;
+}
+.message.own .message-content {
+  background: #dff0d8;
+  float: right;
+}
+.message.own .message-content::after {
+  left: 100%;
+  right: auto;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #d2d2d2;
+}
+.conversation-create-wrap .form-group--wide {
+  width: calc(70% - 130px);
+}
+.conversation-create-wrap .form-group--wide input {
+  width: 100%;
+}
+.conversation-create-wrap .form-group--button {
+  width: 100px;
+}

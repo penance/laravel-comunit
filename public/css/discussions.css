@@ -1,0 +1,49 @@
+.repeatable-container {
+  clear: both;
+}
+.repeatable-container .repeatable__unit {
+  margin-bottom: 8px;
+}
+.options-title {
+  position: relative;
+  display: block;
+  max-width: 876px;
+  margin-top: 28px;
+  margin-bottom: 32px;
+}
+.options-title:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  height: 1px;
+  left: 15px;
+  width: calc(100% - 30px);
+  background: #ccc;
+}
+.start-discussion {
+  margin-top: 16px;
+}
+.discussions-container {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.discussion-excerpt {
+  border-bottom: 1px solid #ccc;
+  padding: 0 16px;
+}
+.discussion-excerpt:last-of-type {
+  border: none;
+}
+.discussion-excerpt .discussion-excerpt__meta {
+  cursor: pointer;
+}
+.discussion-excerpt .discussion-excerpt__meta .discussion-excerpt__meta-item {
+  margin-bottom: 6px;
+}
+.discussion-excerpt .discussion-excerpt__meta .discussion-excerpt__meta-item:last-of-type {
+  margin-bottom: 0;
+}
+.discussion-excerpt .discussion-excerpt__proposal {
+  border-top: 1px solid #ccc;
+  padding: 20px;
+}

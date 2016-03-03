@@ -1,0 +1,53 @@
+@msg_bg : #F8F8F8;
+@msg_bg_active : #DFF0D8;
+
+.message {
+    padding: 5px 10px;
+}
+.message-content {
+    position: relative;
+    float: left;
+    background: @msg_bg;
+    padding: 4px 6px 4px 4px;
+    border-radius: 3px;
+    border: 1px solid darken(@msg_bg, 15%);
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent darken(@msg_bg, 15%) transparent transparent;
+    }
+}
+
+.message.own {
+    .message-content {
+        background: @msg_bg_active;
+        float: right;
+
+        &::after {
+            left: 100%;
+            right: auto;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent darken(@msg_bg, 15%);
+        }
+    }
+}
+
+.conversation-create-wrap {
+    .form-group--wide {
+        width: calc(~'70% - 130px');
+        input {
+            width: 100%;
+        }
+    }
+
+    .form-group--button {
+        width: 100px;
+    }
+}

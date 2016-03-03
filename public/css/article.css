@@ -1,0 +1,8 @@
+.articles-container .panel {
+  display: block;
+  text-decoration: none;
+  transition: box-shadow 250ms ease-out;
+}
+.articles-container .panel:hover {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+}
